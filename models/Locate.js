@@ -66,7 +66,7 @@ LocSchema.pre('save', async function(next) {
     const latitude = this.location.coordinates[0];
     const longitude = this.location.coordinates[1];
     let loc = await reverseGeocoding(latitude, longitude);
-    // console.log(latitude);
+    console.log(loc);
     this.address = loc;
 
     // Do not save address in DB

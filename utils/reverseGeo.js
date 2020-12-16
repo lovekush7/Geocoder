@@ -1,7 +1,7 @@
 const request = require('request');
 const asyncHandler = require('../middleware/async');
 
-const reverseGeocoding = asyncHandler(async(latitude, longitude) => {
+const reverseGeocoding = async(latitude, longitude) => {
 
     var url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/' +
         longitude + ', ' + latitude +
@@ -23,6 +23,6 @@ const reverseGeocoding = asyncHandler(async(latitude, longitude) => {
             return address;
         }
     })
-})
+}
 
 module.exports = reverseGeocoding;
